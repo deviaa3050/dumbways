@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Basic&display=swap" rel="stylesheet">
+    <title></title>
+    <style>
+      html, body {
+        height: 100%;
+      }
+      body{
+        font-family: 'Basic', sans-serif;
+        background-color: #202020;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form{
+        background-color: #FAFAFA;
+        position: relative;
+        top: -10px;
+        margin: 0 auto;
+        width: 500px;
+        height: auto;
+        padding-top: 2%;
+      }
+      .row{
+        margin: 10%;
+      }
+      input{
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      select{
+        width: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type=number] {
+        -moz-appearance:textfield;
+      }
+
+      .label {
+        margin-bottom: 5%;
+      }
+
+      input[name=almt] {
+        height: 100px;
+      }
+
+      input[type=radio] {
+        margin-left: auto;
+        width: 5%;
+        margin-bottom: 1%;
+      }
+
+      .mak {
+        background-color: #CCF3E9;
+        color: black;
+      }
+
+      .mak1 {
+        background-color: #D9F5C9;
+      }
+      .mak2 {
+        background-color: #FCEABC;
+      }
+
+      input[type=submit] {
+        width: auto;
+        margin-left: 10%;
+        padding: 2%;
+        background-color: #3E80F1;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type=submit]:hover {
+        background-color: #CCF3E9;
+        color: black;
+      }
+      a {
+        text-decoration: none;
+        color: #A5A5A5;
+      }
+
+      </style>
+  </head>
+  <body>
+    <form class="form">
+      <div class="row">
+        <div id="nama">
+          <label for="fullname">Nama Lengkap</label>
+            <input type="text" name="fname">
+          </div> <!-- div nama-->
+        <div class="ttl">
+          <label for="tempat">Tempat Lahir</label>
+          <div class="ttl">
+            <select name="tlahir">
+              <option value=""></option>
+              <option value="sby">Surabaya</option>
+              <option value="jkt">Jakarta</option>
+              <option value="bdg">Bandung</option>
+            </select>
+          </div><!-- div ttl-->
+        </div><!-- div ttl-->
+        <div class="ttl">
+          <label for="tgl">Tanggal Lahir</label>
+           <input type="date" name="tglahir">
+        </div><!-- div ttl-->
+        <div id="telp">
+          <label for="telp">No Telepon</label>
+          <input type="number" name="notelp">
+        </div>
+        <div id="alamat">
+          <label for="address">Alamat</label>
+          <input type="text" name="almt">
+        </div>
+        <div class="didik">
+          <label for="pendidikan">Pendidikan Terakhir</label>
+          <div class="didik">
+            <select name="school">
+              <option value=""></option>
+              <option value="sd">SD</option>
+              <option value="smp">SMP</option>
+              <option value="sma">SMA</option>
+              <option value="smk">SMK</option>
+              <option value="s1">S1</option>
+              <option value="s2">S2</option>
+              <option value="s3">S3</option>
+            </select>
+          </div><!-- div didik-->
+        </div><!-- div didik-->
+        <div class="agama">
+          <label for="religi">Agama</label>
+          <div class="label">
+          <input type="radio" name="religi" value="islam"><mark class="mak">Islam</mark><br>
+          <input type="radio" name="religi" value="kristen"><mark class="mak">Kristen</mark><br>
+          <input type="radio" name="religi" value="katolik"><mark class="mak">Katolik</mark><br>
+          </div> <!-- div label-->
+        </div><!-- div agama-->
+        <div class="hobi">
+          <label for="hobby">Hobi</label>
+          <div class="label">
+          <input type="radio" name="hobby" value="renang"><mark class="mak">Renang</mark><br>
+          <input type="radio" name="hobby" value="mancing"><mark class="mak">Mancing</mark><br>
+          <input type="radio" name="hobby" value="game"><mark class="mak">Game</mark><br>
+          <input type="radio" name="hobby" value="gibah"><mark class="mak1">Gibah</mark><br>
+          <input type="radio" name="hobby" value="programming"><mark class="mak2">Programming</mark><br>
+          </div><!-- div label-->
+        </div><!-- div hobi-->
+      </div><!-- div row -->
+      <input type="submit" value="Submit"> &#10024; <a href="#">Edit Label</a>
+      </form>
+  </body>
+</html>
